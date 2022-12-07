@@ -11,5 +11,6 @@ routes.get('/health', (req, res) => {
 routes.post('./users', UserController.banco);
 routes.get('./users', UserController.index);
 routes.get('./users/:id', UserController.show); // Receber o ID do User
+routes.put('./users/:id', UserController.update);
 
 module.exports = routes

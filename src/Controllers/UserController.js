@@ -30,13 +30,16 @@ try {
 }
     } // Se não tiver nenhum id de user retornar error 404
 
-    async update(){
+    async update(req, res){
+       try {
+        const { id } = req.params;
+        
+        await UserModel.findByIdAndUpdate(id, req.body);
 
-
-    }
-
-    async destroy(){
-
+        return res.status(200).json({ message: "User updated" });
+       } catch (error) {
+        return res.status(404).json({message: "Failed to update user"});
+       } 
 
     }
 }
