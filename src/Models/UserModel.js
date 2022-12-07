@@ -6,7 +6,7 @@ const ObjectId = Schema.ObjectId;
 const UserSchema = new Schema({
   id: ObjectId,
   name: String,
-  posts: number
+  posts: Number
 });
 
 const UserModel = mongoose.model('users', UserSchema);
