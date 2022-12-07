@@ -1,4 +1,4 @@
-const startDB = require('/mongodb');
+const startDB = require('./mongodb');
 
 class Loaders {
     start() {
